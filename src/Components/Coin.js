@@ -1,6 +1,6 @@
 import React from 'react'
 import './../App.css'
-function Coin({name,icon,price,symbol}) { 
+function Coin({name,icon,price,symbol,rank}) { 
   const priceIndian =(price)=>{
     var x=price;
     x=x.toString();
@@ -20,7 +20,7 @@ function Coin({name,icon,price,symbol}) {
   return (
     <div className="coin">
         <div>
-          <h1>{name}</h1>
+          <h1>#{rank} {name}</h1>
           <h3>{symbol}</h3>
         </div>
             <img src={icon} alt=""/>
